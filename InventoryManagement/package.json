@@ -1,0 +1,20 @@
+{
+  "name": "inventorymanagement",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Petersen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "googleapis": "^34.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/ws": "^6.0.1",
+    "typescript": "^3.2.2"
+  },
+  "description": ""
+}

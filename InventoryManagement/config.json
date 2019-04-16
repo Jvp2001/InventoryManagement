@@ -1,0 +1,8 @@
+{
+    "OAuth2Client": "google.auth.OAuth",
+    "SCOPES": ["https://www.googleapis.com/auth/spreadsheets"],
+    "Credentials": "credentials.json",
+    "TOKEN_PATH": "token.json",
+    "spreadsheet_ID" : "1NXZhzrEZRLWw4CDFp4S7dme3xGKS19FGZxq3JdfIurU",
+    "range": "Sheet2!A1:F13"
+}

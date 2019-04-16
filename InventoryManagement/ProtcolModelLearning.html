@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PrtocolModel</title>
+</head>
+<body>
+    <table id="protocols" style="width:100%" style="align-content: center boarder;">
+    <thead><tr><th>Layers</th><th>OSI</th><th>Protocols</th><th>TCP/IP</th><th>PDU</th><th>>Devices</th></tr></thead>
+    </table>
+
+    <script>
+        var table = document.getElementById("protocols");
+        
+        //@type {String:[]}data 
+        function createRows(data)
+        {
+            for(let datum of data)
+            {
+                createRow(datum)
+            }
+            function createRow(items)
+            {
+                function createItem(item)
+                {
+                    let cell = document.createElement("td");
+                    item = item == "" ? "?": item;
+                    cell.innerText = (item);
+                    return cell;
+                }
+                let row = document.createElement("tr");
+                for (let index = 0; index < 4; index++)
+                {
+                        row.appendChild(createItem(items[index]));
+                    
+                }
+                table.appendChild(row);
+            }
+        }
+        const osiLayers = ["Application","Session","Transport","Network","Devices","Physical"];
+        const tcpIPLayers = ["Application","Transport","Internet","Data-Link"];
+
+const data = 
+        [
+            
+            ["7","Application","","Application","",""],
+            ["6","Session","","None","",""],
+            ["5","Transport","","None","",""],
+            ["4","Network","","Transport","", ""],
+            ["3","Data","","Internet","",""],
+            ["2","Physical", "", "Data-Link"]
+        ]
+        createRows(data);
+        // createRows([["6","Session","",""]]);
+    </script>
+</body>
+</html>
